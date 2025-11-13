@@ -1,0 +1,17 @@
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.csproj.AssemblyReference.cache
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.AssemblyInfoInputs.cache
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.AssemblyInfo.cs
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.csproj.CoreCompileInputs.cache
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\Homework3.exe
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\Homework3.deps.json
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\Homework3.runtimeconfig.json
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\Homework3.dll
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\Homework3.pdb
+C:\Users\kassi\source\repos\Homework3\Homework3\bin\Debug\net8.0\NLipsum.Core.dll
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.csproj.Up2Date
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.dll
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\refint\Homework3.dll
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.pdb
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\Homework3.genruntimeconfig.cache
+C:\Users\kassi\source\repos\Homework3\Homework3\obj\Debug\net8.0\ref\Homework3.dll
