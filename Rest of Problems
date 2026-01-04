@@ -1,0 +1,293 @@
+//written by kass woods on 11/13/2025 
+
+ 
+
+using System.ComponentModel; 
+
+using System.IO.Pipes; 
+
+using System.Runtime.CompilerServices; 
+
+ 
+
+namespace Homework3 
+
+
+
+{ 
+   public class Program 
+
+    { 
+        static void Main(string[] args)  //main method where we input our string  
+        { 
+            //reverse in method  
+
+            List<int> aNew = ReverseAndNot("1234"); 
+
+            Console.WriteLine(string.Join("", aNew)); 
+ 
+            //smooth sentences  
+
+            Console.WriteLine(SmoothSentence("amazing games sound delightful")); 
+
+            //duplicate count  
+
+            DuplicateCount("irreversable"); 
+
+            //sock pair  
+
+            SockPairs("aabbcdcdffgg"); 
+            //drivers license  
+            List<string> aLicense = License(["Eric", "2", "Adam Caroline Rebecca Frank"]); 
+            //two sum  
+            List<int>atwosum = TwoSum([1,2,4,5,6,7], 9); 
+            //reverse odd length string  
+ReverseOddLength(“have a nice day”); 
+
+        } 
+        //reverse and not method  
+        public static List<int> ReverseAndNot(string input) //revrse int method  
+
+        { 
+            List<int> reverse = new List<int>(); 
+            for (int i = input.Length - 1; i >= 0; i--) //reverse through input 
+            { 
+                reverse.Add(input[i] - '0'); 
+            } 
+
+            for (int i = 0; i < input.Length; i++) //input  
+
+            { 
+
+                reverse.Add(input[i] - '0'); 
+
+            } 
+
+            return reverse; 
+        } 
+
+       //smooth sentences method  
+
+        public static bool SmoothSentence(string sentence) 
+
+        {
+            string[] word = sentence.Split(' '); 
+            for (int i = 0; i < word.Length - 1; i++) 
+
+            { 
+                char first = char.ToLower(word[i][word[i].Length - 1]); 
+
+                char last = char.ToLower(word[i + 1][0]); 
+                if (first != last) 
+
+                    return false; 
+
+            } 
+            return true; 
+
+        } 
+        //count duplicates method  
+
+        public static void DuplicateCount(string word) 
+
+        { 
+ int[] count = new int[65536]; //each character in a string corresponds to a numeric value in this range 
+
+            int duplicates = 0; 
+            for (int i = 0; i < word.Length; i++) 
+
+            { 
+                count[word[i]]++;
+            } 
+            for (int i = 0; i < count.Length; i++) 
+            { 
+                if (count[i] > 1) 
+               { 
+                    duplicates++; 
+                } 
+            } 
+            Console.WriteLine($"Total Duplicates = {duplicates} \n"); 
+        } 
+        //sock pair sorting  
+        public static void SockPairs(string pairs) 
+
+        {
+           pairs.ToUpper(); 
+            int pair = 0; 
+            int[] count = new int[65536]; 
+            for (int i = 0; i < pairs.Length; i++) 
+
+            { 
+                count[pairs[i]]++;  
+            } 
+            for (int i = 0; i < count.Length; i++) 
+            { 
+                if (count[i] == 2) 
+                { 
+                    pair++;
+              } 
+            } 
+            Console.WriteLine($"Pairs = {pair}\n"); 
+
+        } 
+        
+        //input example License("Eric", 2, "Adam Calroline Rebecca Frank") 
+
+        public static List<string> License(string[] list) 
+
+        { 
+            //variables 
+
+            double placeInLine = 0; 
+
+            string myName = list[0]; 
+
+            double avaliableAgents = Convert.ToInt32(list[1]); 
+
+            string peopleBefore = list[2]; 
+
+            double totalTime = 0; 
+
+            string[] person = peopleBefore.Split(' '); 
+
+ 
+            for (int i = 0; i < peopleBefore.Length; i++) 
+           { 
+                char first = myName[0]; 
+
+                char otherFirst = Convert.ToChar(person); 
+
+                if (otherFirst > first) 
+
+                { 
+                    placeInLine++; 
+
+                } 
+            } 
+            double time = placeInLine / avaliableAgents; 
+
+            totalTime = time * 20; 
+
+            string final = Convert.ToString(totalTime); 
+
+ 
+
+            return new List<string> { final }; 
+        } 
+        //Two sum   
+        public static List<int> TwoSum(int[] nums, int target) 
+
+        { 
+            for (int i = 0; i < nums.Length; i++) 
+
+           { 
+              for (int j = i + 1; j < nums.Length; j++) 
+                { 
+                   if (nums[i] + nums[j] == target) 
+                    { 
+                        return new List<int>  { i, j }; 
+                    } 
+                } 
+
+            } 
+             return new List<int> { };
+        }
+    } 
+} 
+using System.Security.Cryptography.X509Certificates; 
+ 
+namespace TrackTheRobot 
+{ 
+    internal class Program 
+    { 
+        static void Main(string[] args) 
+        { 
+            string[] commands = { "up 20", "left 60", "right 90", "down 15" }; 
+
+            TrackRobot(commands); 
+        } 
+         
+ static void TrackRobot(string[] commands) 
+
+        { 
+          int x = 0; 
+
+            int y = 0; 
+ 
+            for (int i = 0; i < commands.Length; i++) 
+
+            { 
+                string[] parts = commands[i].Split(' '); 
+
+                string direction = parts[0]; 
+
+                int value = int.Parse(parts[1]); 
+ 
+                if (direction == "right") 
+
+                    x += value; 
+
+                else if (direction == "left") 
+
+                    x -= value; 
+
+                else if (direction == "up") 
+
+                    y += value; 
+
+                else if (direction == "down") 
+
+                    y -= value; 
+            } 
+            Console.WriteLine($"Final Position = {x},{y})\n"); 
+        } 
+    } 
+    } 
+
+//reverse odd length words  
+
+public static string ReverseOddLength(string input)  
+ { 
+     string[] words = input.Split(' '); 
+
+     StringBuilder result = new StringBuilder(); 
+ 
+     for (int i = 0; i < words.Length; i++) 
+
+     { 
+         if ((i + 1) % 2 != 0)  
+         {                     
+             char[] charArray = words[i].ToCharArray(); 
+
+             for (int j = 0, k = charArray.Length - 1; j < k; j++, k--) //revrse loop  
+             { 
+                 char temp = charArray[j]; 
+
+                 charArray[j] = charArray[k]; 
+
+                 charArray[k] = temp; 
+             } 
+             result.Append(new string(charArray)); 
+         } 
+         else 
+         { 
+             result.Append(words[i]); 
+         }  
+         if (i < words.Length - 1) 
+
+         { 
+             result.Append(" ");  
+         } 
+     } 
+
+           
+
+     return result.ToString(); 
+
+ 
+
+ 
+
+ }   
+
+ 
